@@ -2,7 +2,7 @@
 
 A Vim frontend for [howdoi][1], the awesome command line tool that lets you ask what you need and grabs the snippet of code from SO.
 
-<img src="https://github.com/laurentgoudet/vim-howdoi/blob/master/vim-howdoi.gif" />
+<img src="https://raw.github.com/laurentgoudet/vim-howdoi/master/vim-howdoi.gif"/>
 
 # Features
 
