@@ -2,7 +2,7 @@
 
 A Vim frontend for [howdoi][1], the awesome command line tool that lets you ask what you need and grabs the snippet of code from SO.
 
-<img src="http://raw.github.com/laurentgoudet/vim-howdoi/vim-howdoi.gif"/>
+<img src="https://github.com/laurentgoudet/vim-howdoi/blob/master/vim-howdoi.gif" />
 
 # Features
 
@@ -65,5 +65,4 @@ This plugin is released under the [WTFPLv2 License][2].
 
 [1]: https://github.com/gleitz/howdoi
 [2]: http://www.wtfpl.net/txt/copying/
-`
 
