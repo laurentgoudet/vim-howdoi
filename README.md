@@ -26,7 +26,7 @@ vim --version | grep +python
 
 Vim package in Ubuntu and it's derivatives comes with +python support.
 
-# Installion
+# Installation
 
 ## Pathogen
 
