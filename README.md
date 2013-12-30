@@ -8,7 +8,7 @@ A Vim frontend for [howdoi][1], the awesome command line tool that lets you ask 
 
   * Type your query and enter `<CTRL-H>` to get the code!
   * You can also use the plugin's menu entry under GUI
-  * Overwrite the default mapping with `map <WhatYouWant>  <Plug>Howdoi`
+  * Overwrite the default mapping with `map <WhatYouWant> <Plug>Howdoi`
 
 # Requirements
 
