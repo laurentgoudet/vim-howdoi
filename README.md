@@ -59,7 +59,7 @@ cd ~/.vim
 git clone https://github.com/laurentgoudet/vim-howdoi.git bundle/vim-howdoi
 ```
 
-Add to your ```~/.vimrc```
+Add to your `~/.vimrc`:
 
 ```
 set runtimepath^=~/.vim/bundle/vim-howdoi
