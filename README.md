@@ -50,6 +50,21 @@ Then, from the command line, run:
 vim +BundleInstall +qall
 ```
 
+## Manually
+
+Clone the plugin into a seperate directory:
+
+```bash
+cd ~/.vim
+git clone https://github.com/laurentgoudet/vim-howdoi.git bundle/vim-howdoi
+```
+
+Add to your `~/.vimrc`:
+
+```
+set runtimepath^=~/.vim/bundle/vim-howdoi
+```
+
 # Usage
 
 1. Write what your are looking for
