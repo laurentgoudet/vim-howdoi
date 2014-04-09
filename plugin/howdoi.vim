@@ -20,6 +20,11 @@ if !has('python')
     finish
 endif
 
+if !executable('howdoi')
+  echoerr "Required howdoi package to be installed"
+    finish
+endif
+
 let g:howdoi = 1 
 
 " Section: Functions definitions {{{1
