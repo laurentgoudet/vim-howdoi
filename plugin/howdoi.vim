@@ -31,8 +31,27 @@ python << EOF
 
 import subprocess, vim
 
+filetypes = {
+  "c" : "c", 
+  "java" : "java",
+  "cpp" : "c++",
+  "cs" : "c#",
+  "python" : "python",
+  "php" : "php",
+  "javascript" : "javascript",
+  "ruby" : "ruby"
+} 
+
+query = vim.current.line
+filetype = vim.eval("&ft")
+
+# add filetype to query if not already present
+if filetype in filetypes:
+  if filetype not in query:
+    query += " in " + filetypes[filetype]
+
 # Call howdoi, I'm way too lazy
-p = subprocess.Popen("howdoi " + vim.current.line,
+p = subprocess.Popen("howdoi " + query,
   stdout=subprocess.PIPE,
   stderr=subprocess.PIPE,
   shell=True)
