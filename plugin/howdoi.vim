@@ -20,11 +20,6 @@ if !has('python')
     finish
 endif
 
-if !executable('howdoi')
-  echoerr "Required howdoi package to be installed"
-    finish
-endif
-
 let g:howdoi = 1 
 
 " Section: Functions definitions {{{1
@@ -35,6 +30,10 @@ function! s:Howdoi()
 python << EOF
 
 import subprocess, vim
+
+howdoi_installed = vim.eval("executable('howdoi')")
+if howdoi_installed == "0":
+  print "Expected howdoi package to be installed"
 
 filetypes = {
   "c" : "c", 
