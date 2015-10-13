@@ -96,7 +96,7 @@ function! s:CreateMaps(target, desc, combo)
   " Setup default combo
   if strlen(a:combo) && !exists("no_plugin_maps")
     if !hasmapto(plug)
-      execute 'nnoremap ' . a:combo . ' ' . plug
+      execute 'map ' . a:combo . ' ' . plug
     endif
   endif
 
