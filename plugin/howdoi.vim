@@ -15,12 +15,14 @@ if exists("g:howdoi")
     finish
 endif
 
+if !exists('g:howdoi_map') | let g:howdoi_map = '<c-h>' | en
+
 if !has('python')
   echoerr "Required vim compiled with +python"
     finish
 endif
 
-let g:howdoi = 1 
+let g:howdoi = 1
 
 " Section: Functions definitions {{{1
 " ===========================================================================
@@ -36,7 +38,7 @@ if howdoi_installed == "0":
   print "Expected howdoi package to be installed"
 
 filetypes = {
-  "c" : "c", 
+  "c" : "c",
   "java" : "java",
   "cpp" : "c++",
   "cs" : "c#",
@@ -44,7 +46,7 @@ filetypes = {
   "php" : "php",
   "javascript" : "javascript",
   "ruby" : "ruby"
-} 
+}
 
 query = vim.current.line
 filetype = vim.eval("&ft")
@@ -109,5 +111,5 @@ function! s:CreateMaps(target, desc, combo)
 endfunction
 
 " Function name / Menu entry / Default mapping
-call s:CreateMaps('Howdoi',        'howdoi',         '<C-h>')
+call s:CreateMaps('Howdoi', 'howdoi', g:howdoi_map)
 
