@@ -52,9 +52,11 @@ query = vim.current.line
 filetype = vim.eval("&ft")
 
 # add filetype to query if not already present
-if filetype in filetypes:
-  if filetype not in query:
+if "vim" not in query and filetype not in query:
+  if filetype in filetypes:
     query += " in " + filetypes[filetype]
+  else:
+    query += " in " + filetype
 
 # Call howdoi, I'm way too lazy
 p = subprocess.Popen("howdoi " + query,
@@ -94,7 +96,7 @@ function! s:CreateMaps(target, desc, combo)
   " Setup default combo
   if strlen(a:combo) && !exists("no_plugin_maps")
     if !hasmapto(plug)
-      execute 'map ' . a:combo . ' ' . plug
+      execute 'nnoremap ' . a:combo . ' ' . plug
     endif
   endif
 
