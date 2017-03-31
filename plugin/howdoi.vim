@@ -55,10 +55,9 @@ if filetype in filetypes:
     query += " in " + filetypes[filetype]
 
 # Call howdoi, I'm way too lazy
-p = subprocess.Popen("howdoi " + query,
+p = subprocess.Popen(["howdoi", query],
   stdout=subprocess.PIPE,
-  stderr=subprocess.PIPE,
-  shell=True)
+  stderr=subprocess.PIPE)
 output, errors = p.communicate()
 
 # Clean up a bit
